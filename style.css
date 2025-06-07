@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6f0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  text-align: center;
+  z-index: 1000;
+  max-width: 90%;
+}
+
+.popup h2 {
+  color: #e60073;
+  margin-bottom: 15px;
+}
+
+.popup button {
+  padding: 10px 25px;
+  background-color: #e60073;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #cc0059;
+}
+
+#popupButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+#surpriseMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 1001;
+  text-align: center;
+}
+
+#shayariText {
+  font-size: 20px;
+  color: #d1006b;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
