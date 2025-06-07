@@ -1,39 +1,39 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You 💖</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="main-container">
-    <h1 class="title">Hi My Love ❤️</h1>
-    <p class="subtitle">A little something for you...</p>
-  </div>
 
-  <!-- Popup Message -->
-  <div id="popup" class="popup">
-    <p id="popup-text"></p>
-    <div class="popup-buttons">
-      <button onclick="handleAnswer(true)">Yes</button>
-      <button onclick="handleAnswer(false)">No</button>
+  <!-- Popup Box -->
+  <div class="popup" id="popupBox">
+    <h2 id="popupHeading">Hi 💕</h2>
+    <p id="popupText">Kya tum ready ho thoda sa pyaar mehsoos karne ke liye?</p>
+    <div id="popupButtons">
+      <button onclick="nextPopup()">Yes 💖</button>
+      <button onclick="rejectPopup()">No 😢</button>
     </div>
   </div>
 
-  <!-- No Answer Message -->
-  <div id="no-message" class="hidden">
-    <h2>Ohh 😢</h2>
-    <p>Even if you said no, you'll always have a special place in my heart ❤️</p>
+  <!-- Surprise Shayari -->
+  <div id="surpriseMessage">
+    <h2>✨ Surprise Message ✨</h2>
+    <p id="shayariText">
+      "Tere hone se hai roshan meri duniya,<br>
+      Tujhme hi basa hai mera jahaan ❤️"
+    </p>
   </div>
 
-  <!-- Final Surprise Message -->
-  <div id="surprise-message" class="hidden">
-    <h2>Ek Choti Si Shayari ✨</h2>
-    <p>"Tere khayalon mein hi jeete hain hum,<br>Tu jo ho saath toh sab kuch hai sanam..."</p>
-    <button onclick="showFinalLove()">Click Here 💌</button>
-    <p id="final-love" class="hidden">I love you so much my love ❤️</p>
+  <!-- Main Site Content -->
+  <div id="mainContent">
+    <h1>Welcome to Our Love Page ❤️</h1>
+    <p>This is a special page just for you...</p>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
