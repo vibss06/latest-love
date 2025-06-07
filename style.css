@@ -74,6 +74,21 @@ body {
   font-family: 'Georgia', serif;
 }
 
+#revealBtn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #ff4d88;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#revealBtn:hover {
+  background-color: #e6005c;
+}
 
 
 
