@@ -1,81 +1,77 @@
 body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6f0;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  color: #fff;
-}
-
-.title {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
-}
-
-.subtitle {
-  font-size: 1.2em;
-  margin-bottom: 2em;
 }
 
 .popup {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 2em;
-  border-radius: 1em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  text-align: center;
+  z-index: 1000;
   max-width: 90%;
 }
 
-.popup-buttons button {
-  margin: 0.5em;
-  padding: 0.8em 1.5em;
-  font-size: 1em;
-  background-color: #ff5e78;
+.popup h2 {
+  color: #e60073;
+  margin-bottom: 15px;
+}
+
+.popup button {
+  padding: 10px 25px;
+  background-color: #e60073;
   border: none;
+  border-radius: 25px;
   color: white;
-  border-radius: 0.5em;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.popup-buttons button:hover {
-  background-color: #ff8a9a;
-}
-
-.hidden {
-  display: none;
-}
-
-#no-message, #surprise-message {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 2em;
-  border-radius: 1em;
-  margin-top: 1em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  max-width: 90%;
-}
-
-#final-love {
-  margin-top: 1em;
-  font-size: 1.5em;
-  color: #ffe6f0;
   font-weight: bold;
-  animation: fadeIn 2s ease-in-out;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.popup button:hover {
+  background-color: #cc0059;
+}
+
+#popupButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+#surpriseMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 1001;
+  text-align: center;
+}
+
+#shayariText {
+  font-size: 20px;
+  color: #d1006b;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
 }
 
 
