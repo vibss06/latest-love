@@ -29,3 +29,9 @@ function rejectPopup() {
 window.onload = function () {
   document.getElementById("mainContent").classList.add("blurred");
 };
+
+
+function showLoveMessage() {
+  document.getElementById("loveMessage").style.display = "block";
+}
+
