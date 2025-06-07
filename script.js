@@ -1,37 +1,42 @@
 const questions = [
-  "Kya tum ready ho thoda sa pyaar mehsoos karne ke liye?",
-  "Kya tumhe bhi meri yadoon me khoye rehna pasnd hai?",
-  "Tula mazya dolyat khrr prem diste ka 👀?",
-  "Tufakt  majhya sapnat nahi, majhya life madhe yeshil ka?",
-  "Mi engineer banaycha ahe, pan tujhya smile che calculation jamtay mala… try karu ka?",
-  "Mi coffee nahi, pan tujhya sobtine roz garam hoto… jamel ka ? chee ha chan navhta",
-  "Last question — Kya ek cute date per chalogi mere sath ? jab bhi teri mummy aane de💍"
+  "Do you love me? 💖",
+  "Will you stay with me forever? 💍",
+  "Am I the reason behind your smile? 😊",
+  "Can I call you my soulmate? 🌙",
+  "Do I make your heart skip a beat? 💓"
 ];
 
 let currentQuestion = 0;
 
-function nextPopup() {
+const popup = document.getElementById("popup");
+const popupText = document.getElementById("popup-text");
+const noMessage = document.getElementById("no-message");
+const surpriseMessage = document.getElementById("surprise-message");
+const finalLove = document.getElementById("final-love");
+
+window.onload = () => {
+  popup.classList.remove("hidden");
+  popupText.innerText = questions[currentQuestion];
+};
+
+function handleAnswer(answer) {
+  if (!answer) {
+    popup.classList.add("hidden");
+    noMessage.classList.remove("hidden");
+    return;
+  }
+
   currentQuestion++;
+
   if (currentQuestion < questions.length) {
-    document.getElementById("popupText").innerText = questions[currentQuestion];
+    popupText.innerText = questions[currentQuestion];
   } else {
-    document.getElementById("popupBox").style.display = "none";
-    document.getElementById("surpriseMessage").style.display = "block";
-    document.getElementById("mainContent").classList.remove("blurred");
+    popup.classList.add("hidden");
+    surpriseMessage.classList.remove("hidden");
   }
 }
 
-function rejectPopup() {
-  document.getElementById("popupText").innerText = "Oye aisa kya abi theek hai n 💔😭 Mala  "NO" bolun jashil tari kuthe 😎";
-  document.getElementById("popupButtons").style.display = "none";
-}
-
-window.onload = function () {
-  document.getElementById("mainContent").classList.add("blurred");
-};
-
-function showILoveYou() {
-  document.getElementById("loveMessage").style.display = "block";
-  document.getElementById("revealBtn").style.display = "none";
+function showFinalLove() {
+  finalLove.classList.remove("hidden");
 }
 
