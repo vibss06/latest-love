@@ -1,42 +1,29 @@
 const questions = [
-  "Do you love me? 💖",
-  "Will you stay with me forever? 💍",
-  "Am I the reason behind your smile? 😊",
-  "Can I call you my soulmate? 🌙",
-  "Do I make your heart skip a beat? 💓"
+  "Kya tum ready ho thoda sa pyaar mehsoos karne ke liye?",
+  "Kya tum mere saath hamesha rehna chahogi?",
+  "Kya tum mujhe kabhi nahi bhoologi?",
+  "Kya tum mujhe apna maanogi dil se?",
+  "Last question — Kya tum iss pyare safar ke liye haan kahogi? 💍"
 ];
 
 let currentQuestion = 0;
 
-const popup = document.getElementById("popup");
-const popupText = document.getElementById("popup-text");
-const noMessage = document.getElementById("no-message");
-const surpriseMessage = document.getElementById("surprise-message");
-const finalLove = document.getElementById("final-love");
-
-window.onload = () => {
-  popup.classList.remove("hidden");
-  popupText.innerText = questions[currentQuestion];
-};
-
-function handleAnswer(answer) {
-  if (!answer) {
-    popup.classList.add("hidden");
-    noMessage.classList.remove("hidden");
-    return;
-  }
-
+function nextPopup() {
   currentQuestion++;
-
   if (currentQuestion < questions.length) {
-    popupText.innerText = questions[currentQuestion];
+    document.getElementById("popupText").innerText = questions[currentQuestion];
   } else {
-    popup.classList.add("hidden");
-    surpriseMessage.classList.remove("hidden");
+    document.getElementById("popupBox").style.display = "none";
+    document.getElementById("surpriseMessage").style.display = "block";
+    document.getElementById("mainContent").classList.remove("blurred");
   }
 }
 
-function showFinalLove() {
-  finalLove.classList.remove("hidden");
+function rejectPopup() {
+  document.getElementById("popupText").innerText = "Oye hoye... dil toot gaya 💔😭 Par ek din tum bhi manaogi 😎";
+  document.getElementById("popupButtons").style.display = "none";
 }
 
+window.onload = function () {
+  document.getElementById("mainContent").classList.add("blurred");
+};
