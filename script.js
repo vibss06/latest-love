@@ -31,7 +31,5 @@ window.onload = function () {
 };
 
 
-function showLoveMessage() {
-  document.getElementById("loveMessage").style.display = "block";
-}
+
 
